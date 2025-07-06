@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="container">
+	<div class="calculator">
+			<form>
+				<div>
+					<input type="text" name="screen" class="screen" id="screen" readonly>
+				</div>
+
+				<div>
+					<input type="button" value="%" class="operator" onclick="screen.value+='%'">
+					<input type="button" value="e" class="operator" onclick="screen.value+=Math.E">
+					<input type="button" value="⌊x⌋" class="operator" onclick="screen.value = Math.floor(screen.value)"> 
+					<input type="button" value="AC" class="operator" onclick="screen.value=''">
+					<input type="button" value="DE" class="operator" onclick="screen.value=screen.value.toString().slice(0,-1)">
+				</div>
+
+				<div>
+					<input type="button" value="!" class="operator" onclick="screen.value=screen.value = factorial(screen.value)">
+					<input type="button" value="π" class="operator" onclick="screen.value+=Math.PI">
+					<input type="button" value="sin" class="operator" onclick="screen.value='Math.sin(' + screen.value + ')'">
+					<input type="button" value="cos" class="operator" onclick="screen.value='Math.cos(' + screen.value + ')'">
+					<input type="button" value="tan" class="operator" onclick="screen.value='Math.tan(' + screen.value + ')'">
+				</div>
+
+				<div>
+					<input type="button" value="log" class="operator" onclick="screen.value='Math.log(' + screen.value + ')'">
+					<input type="button" value="ln" class="operator" onclick="screen.value = Math.log(screen.value)">
+					<input type="button" value="exp" class="operator" onclick="screen.value='Math.exp(' + screen.value + ')'">
+					<input type="button" value="mod" class="operator" onclick="screen.value+='%'">
+					<input type="button" value="^" class="operator" onclick="screen.value+='**'">
+				</div>
+
+				<div>
+					<input type="button" value="³√" class="operator" onclick="screen.value='Math.cbrt(' + screen.value + ')'">
+					<input type="button" value="√x" class="operator" onclick="screen.value='Math.pow(' + screen.value + ', 0.5)'">
+					<input type="button" value="x²" class="operator" onclick="screen.value='Math.pow(' + screen.value + ', 2)'">
+					<input type="button" value="x³" class="operator" onclick="screen.value='Math.pow(' + screen.value + ', 3)'">
+					<input type="button" value="x^y" class="operator" onclick="screen.value+='**'">
+				</div>
+
+				<div>
+					<input type="button" value="9" onclick="screen.value+='9'">
+					<input type="button" value="8" onclick="screen.value+='8'">
+					<input type="button" value="7" onclick="screen.value+='7'">
+					<input type="button" value="(" class="oper" onclick="screen.value+='('">
+					<input type="button" value=")" class="oper" onclick="screen.value+=')'">
+				</div>
+
+				<div>
+					<input type="button" value="4" onclick="screen.value+='4'">
+					<input type="button" value="5" onclick="screen.value+='5'">
+					<input type="button" value="6" onclick="screen.value+='6'">
+					<input type="button" value="*" class="oper" onclick="screen.value+='*'">
+					<input type="button" value="/" class="oper" onclick="screen.value+='/'">
+				</div>
+				
+
+				<div>
+					<input type="button" value="1" onclick="screen.value+='1'">
+					<input type="button" value="2" onclick="screen.value+='2'">
+					<input type="button" value="3" onclick="screen.value+='3'">
+					<input type="button" value="+" class="oper" onclick="screen.value+='+'">
+					<input type="button" value="-" class="oper" onclick="screen.value+='-'">
+				</div>
+				<div>
+					<input type="button" value="00" onclick="screen.value+='00'">
+					<input type="button" value="0" onclick="screen.value+='0'">
+					<input type="button" value="." class="oper" onclick="screen.value+='.'">
+					<input type="button" value="=" class="equal" onclick="screen.value=eval(screen.value)">
+				</div>
+			</form>
+		</div>
+	</div>
+<script>
+	function factorial(n) {
+		if (n == 0) return 1;
+		return n * factorial(n - 1);
+	}	
+
+	const screen = document.getElementById('screen');
+
+	document.addEventListener('keydown', (e) => {
+		const allowed = "0123456789+-*/().^!%";
+
+		if (allowed.includes(e.key)) {
+			if (screen.value === "0") {
+				screen.value = e.key;
+			}
+			else {
+				screen.value += e.key;
+			}
+		} 
+		else if (e.key === "Enter") {
+			try {
+				screen.value = eval(screen.value);  // Calculate result on Enter
+			} 
+			catch {
+				screen.value = "Error";
+			}
+		} 
+		else{
+			if (e.key === "Backspace") {
+			screen.value = screen.value.slice(0, -1); // Delete last char
+			} 
+			else if (e.key === "Escape") {
+			screen.value = "";              // Clear screen on Escape
+			}
+		}
+	});
+</script>
+</body>
+</html>
