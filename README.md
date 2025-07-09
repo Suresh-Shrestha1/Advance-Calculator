@@ -1,6 +1,7 @@
+
 # 🧮 Advanced Calculator
 
-![Calculator Screenshot](./assets/calulator-screenshot.png)
+**A web-based advanced calculator built with HTML, CSS, and JavaScript. It supports basic arithmetic, scientific functions, and keyboard input.**
 
 ---
 
@@ -23,8 +24,8 @@
 
 ## 🖼️ Design Preview
 
-> ![Calculator UI Preview](https://user-images.githubusercontent.com/placeholder/advance-calculator-ui.png)
->
+> ![Calculator UI Preview](./assets/calculator-screenshot.png)
+
 > *Modern, glassy interface with rounded buttons and soft shadows.  
 > Symbols and icons are used for functions for a user-friendly experience.*
 
@@ -63,6 +64,15 @@
 - Use color highlights for operators and functions
 - Add a dark/light mode toggle
 - Use animated button effects
+
+---
+
+## 📝 Note
+
+- Some scientific functions are inserted as JavaScript expressions (e.g., `Math.sin(...)`).  
+  You may need to press `=` to evaluate them.
+- The calculator uses JavaScript's `eval()` for expression evaluation.  
+  Use with caution and avoid entering unsafe code.
 
 ---
 
