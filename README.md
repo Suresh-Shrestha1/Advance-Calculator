@@ -1,6 +1,6 @@
 # 🧮 Advanced Calculator
 
-![Calculator Screenshot](https://user-images.githubusercontent.com/placeholder/calculator-design.png)
+![Calculator Screenshot](./assets/calulator-screenshot.png)
 
 ---
 
