@@ -50,7 +50,17 @@
 
 ---
 
-## 📁 Files
+## 📁 Files Structure
+
+```
+├── index.html
+├── style.css
+├── README.md
+└── assets/
+    └── calculator-screenshot.png
+    └── advance-calculator.gif
+
+```
 
 - `index.html` — Calculator UI & logic  
 - `style.css` — Custom styles  
