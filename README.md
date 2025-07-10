@@ -78,7 +78,7 @@
 
 ## 🚀 Demo
 
-> _![CAlculator Demo Video](./assets/advance-calculator.mp4)
+> _![Calculator Demo Video](https://github.com/Suresh-Shrestha1/Advance-Calculator/blob/main/assets/advance-calculator.mp4)
 
 ---
 
