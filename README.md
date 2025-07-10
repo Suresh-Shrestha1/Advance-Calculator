@@ -78,7 +78,7 @@
 
 ## 🚀 Demo
 
-> _Replace the image links above with your own screenshots or design mockups!_
+> _![CAlculator Demo Video](./assets/advance-calculator.mp4)
 
 ---
 
