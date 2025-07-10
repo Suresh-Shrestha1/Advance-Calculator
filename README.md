@@ -24,7 +24,7 @@
 
 ## 🖼️ Design Preview
 
-> ![Calculator UI Preview](./assets/calculator-screenshot.png)
+> ![Calculator UI Preview](https://github.com/Suresh-Shrestha1/Advance-Calculator/blob/main/assets/calculator-screenshot.png)
 
 > *Modern, glassy interface with rounded buttons and soft shadows.  
 > Symbols and icons are used for functions for a user-friendly experience.*
@@ -78,7 +78,7 @@
 
 ## 🚀 Demo
 
-> _![Calculator Demo Video](https://github.com/Suresh-Shrestha1/Advance-Calculator/blob/main/assets/advance-calculator.mp4)
+> ![Calculator Demo Video](https://github.com/Suresh-Shrestha1/Advance-Calculator/blob/main/assets/advance-calculator.gif)
 
 ---
 
